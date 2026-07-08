@@ -6,3 +6,5 @@ __pycache__/
 *.pyc
 bookmarks/db.sqlite3
 db.sqlite3
+cert.key
+cert.crt
