@@ -209,7 +209,8 @@ select:focus{
 =========================================== */
 
 button,
-input[type=submit]{
+input[type=submit],
+.button{
 
     margin-top:20px;
 
@@ -229,15 +230,30 @@ input[type=submit]{
 
     cursor:pointer;
 
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
     transition:.3s;
 }
 
 button:hover,
-input[type=submit]:hover{
+input[type=submit]:hover,
+.button:hover{
 
     transform:translateY(-3px);
 
     box-shadow:0 12px 25px rgba(37,99,235,.35);
+}
+
+.image-preview{
+    display:block;
+    width:100%;
+    max-width:100%;
+    margin:24px 0;
+    border-radius:18px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
 }
 
 /* ===========================================
@@ -358,6 +374,16 @@ table tr:hover{
     font-weight:500;
 }
 
+.user a{
+    color:#2563eb;
+    text-decoration:none;
+    transition:.2s;
+}
+
+.user a:hover{
+    color:#1d4ed8;
+}
+
 .user form{
     display:inline-block;
     margin:0;
@@ -377,13 +403,24 @@ table tr:hover{
 }
 
 .messages .close{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:28px;
+    height:28px;
+    border-radius:999px;
+    background:rgba(255,255,255,.9);
+    border:1px solid rgba(209,213,219,.7);
     color:inherit;
+    text-decoration:none;
     font-weight:700;
     opacity:.7;
+    transition:.2s;
 }
 
 .messages .close:hover{
     opacity:1;
+    transform:scale(1.05);
 }
 
 .social{
